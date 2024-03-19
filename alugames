@@ -1,0 +1,24 @@
+function alterarStatus(num1) {
+    let game;
+    if (num1 == '1') {
+        game = 'game-1';
+    }
+    if (num1 == '2') {
+        game = 'game-2';
+    }
+    if (num1 == '3') {
+        game = 'game-3';
+    }
+    let gameSelecionado;
+    gameSelecionado = document.getElementById(game).querySelector('div'); //.getElementsByClassName('dashboard__item__img');
+    console.log(gameSelecionado);
+    if (gameSelecionado.className == 'dashboard__item__img') {
+        gameSelecionado.classList.add('dashboard__item__img--rented');
+
+         alert('pegou');
+        
+    } else {
+        gameSelecionado.classList.remove('dashboard__item__img--rented');
+    }
+    console.log(gameSelecionado);
+}
